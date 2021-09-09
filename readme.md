@@ -1,5 +1,6 @@
 (Arguably) Useful Shellscripts
 =================================
+A small collection of short shellscripts / bash one-liners that *may* improve a security tester's QoL.
 
 ### Scripts
 * `geoip.sh` Queries ipinfo.io for geolocation details on a given IP address.
