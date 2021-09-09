@@ -2,6 +2,7 @@
 
 # Check for help flag; provide example use
 if [[ $1 == '--help' || $1 == '-h' || -z $1 ]]; then
+    echo "Sort nmap / masscan live ports to various lists"
     echo "portsort.sh <path-to-masscan.txt> [<path-to-output-directory>]"
     exit
 fi
