@@ -42,6 +42,7 @@ for file in $(ls $outdir); do
     elif [ $file = "p22.lst" ]; then mv $outdir/$file $outdir/ssh.lst
     elif [ $file = "p23.lst" ]; then mv $outdir/$file $outdir/telnet.lst
     elif [ $file = "p25.lst" ]; then mv $outdir/$file $outdir/smtp.lst
+    elif [ $file = "p53.lst" ]; then mv $outdir/$file $outdir/dns.lst
     elif [ $file = "p80.lst" ]; then mv $outdir/$file $outdir/http.lst
     elif [ $file = "p88.lst" ]; then mv $outdir/$file $outdir/kerberos.lst
     elif [ $file = "p111.lst" ]; then mv $outdir/$file $outdir/nfs.lst
@@ -51,6 +52,7 @@ for file in $(ls $outdir); do
     elif [ $file = "p443.lst" ]; then mv $outdir/$file $outdir/https.lst
     elif [ $file = "p445.lst" ]; then mv $outdir/$file $outdir/smb.lst
     elif [ $file = "p636.lst" ]; then mv $outdir/$file $outdir/ldaps.lst
+    elif [ $file = "p1433.lst" ]; then mv $outdir/$file $outdir/mssql.lst
     elif [ $file = "p3306.lst" ]; then mv $outdir/$file $outdir/mysql.lst
     elif [ $file = "p3389.lst" ]; then mv $outdir/$file $outdir/rdp.lst
     fi
