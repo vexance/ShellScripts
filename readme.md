@@ -8,7 +8,7 @@ A small collection of short shellscripts / bash one-liners that *may* improve a 
 * `hunterio-verify.sh` Queries hunter.io to verify the validity of a provided email address. Requires HUNTERIO_API_KEY in the environment variable.
 * `o365authcheck.sh` Checks the authentication method in use for a domain's Office 365 tenant. Managed authentication can be leveraged to enumerate usernames.
 * `portsort.sh` Sorts masscan / nmap output into various IP lists based of port number / protocol name
-
+* `check-dnssec.sh` Checks a domain's DNS records for DS, DNSKEY, and RRSIG records to see if DNSSEC is configured
 ---
 
 #### Examples
