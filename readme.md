@@ -9,6 +9,7 @@ A small collection of short shellscripts / bash one-liners that *may* improve a 
 * `o365authcheck.sh` Checks the authentication method in use for a domain's Office 365 tenant. Managed authentication can be leveraged to enumerate usernames.
 * `portsort.sh` Sorts masscan / nmap output into various IP lists based of port number / protocol name
 * `check-dnssec.sh` Checks a domain's DNS records for DS, DNSKEY, and RRSIG records to see if DNSSEC is configured
+* `check-emailsec.sh` Checks a domain's DNS records for TXT entries indicating SPF and DMARC policies
 ---
 
 #### Examples
@@ -70,4 +71,10 @@ example.com has RRSIG record DS 8 2 86400 20211006041604 20210929030604 39343 co
 example.com has DNSKEY record 257 3 8 AwEAAZ0aqu1rJ6orJynrRfNpPmayJZoAx9Ic2/Rl9VQWLMHyjxxem3VU SoNUIFXERQbj0A9Ogp0zDM9YIccKLRd6LmWiDCt7UJQxVdD+heb5Ec4q lqGmyX9MDabkvX2NvMwsUecbYBq8oXeTT9LRmCUt9KUt/WOi6DKECxoG /bWTykrXyBR8elD+SQY43OAVjlWrVltHxgp4/rhBCvRbmdflunaPIgu2 7eE2U4myDSLT8a4A0rB5uHG4PkOa9dIRs9y00M2mWf4lyPee7vi5few2 dbayHXmieGcaAHrx76NGAABeY393xjlmDNcUkF1gpNWUla4fWZbbaYQz A93mLdrng+M=
 example.com has DNSKEY record 257 3 8 AwEAAbOFAxl+Lkt0UMglZizKEC1AxUu8zlj65KYatR5wBWMrh18TYzK/ ig6Y1t5YTWCO68bynorpNu9fqNFALX7bVl9/gybA0v0EhF+dgXmoUfRX 7ksMGgBvtfa2/Y9a3klXNLqkTszIQ4PEMVCjtryl19Be9/PkFeC9ITjg MRQsQhmB39eyMYnal+f3bUxKk4fq7cuEU0dbRpue4H/N6jPucXWOwiMA kTJhghqgy+o9FfIp+tR/emKao94/wpVXDcPf5B18j7xz2SvTTxiuqCzC MtsxnikZHcoh1j4g+Y1B8zIMIvrEM+pZGhh/Yuf4RwCBgaYCi9hpiMWV vS4WBzx0/lU=
 example.com has DNSKEY record 256 3 8 AwEAAd0r756MOcFM1jtDwNY/45mvMBIvpnxz7X7pIZ/KzhFuBQ8n7Wlo KUCvlrlF6hljlsO0dXDJUvY9N1Q+kjWGTVQjXRHwEngIfU8cVwOraYoM bIcp9ty0hSXqgijNu7sVVRrWfhsfyFI82AFMjXpoKwyaMUe8/VT4OUkl E5gdYXAR
+```
+```bash
+check-emailsec.sh example.com
+example.com descriptive text "8j5nfqld20zpcyr8xjw0ydcfq9rk8hgm"
+example.com descriptive text "v=spf1 -all"
+Host _dmarc.example.com not found: 3(NXDOMAIN)
 ```
