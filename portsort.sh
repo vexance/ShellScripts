@@ -51,7 +51,7 @@ for file in $(ls $outdir); do
     elif [ $file = "p389.lst" ]; then mv $outdir/$file $outdir/ldap.lst
     elif [ $file = "p443.lst" ]; then mv $outdir/$file $outdir/https.lst
     elif [ $file = "p445.lst" ]; then mv $outdir/$file $outdir/smb.lst
-    elif [ $file = "p623.lst" ]; then mv $outdir/$file $outdir/ipimi.lst
+    elif [ $file = "p623.lst" ]; then mv $outdir/$file $outdir/ipmi.lst
     elif [ $file = "p636.lst" ]; then mv $outdir/$file $outdir/ldaps.lst
     elif [ $file = "p1433.lst" ]; then mv $outdir/$file $outdir/mssql.lst
     elif [ $file = "p3306.lst" ]; then mv $outdir/$file $outdir/mysql.lst
