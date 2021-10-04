@@ -6,4 +6,4 @@ if [[ $1 == '--help' || $1 == '-h' || -z $1 ]]; then
 fi
 
 host -t txt $1 | grep --color=auto -iE "$1|\"v=spf.*|has no TXT record|not found"
-host -t txt "_dmarc.$1" | grep --color=auto -iE "_dmarc[.]$1|none|has no TXT record|not found"
+host -t txt "_dmarc.$1" | grep --color=auto -iE "_dmarc[.]$1|\"v=DMARC.*|none|has no TXT record|not found"
