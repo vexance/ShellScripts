@@ -17,8 +17,8 @@ fi
 if [ $2 ]; then
     outdir="$2/"
 else
-    echo "[+] Output directory not specified, defaulting to '/RSM/Lists/'"
-    outdir="/RSM/Lists/"
+    echo "[+] Output directory not specified, defaulting to './Lists/'"
+    outdir="./Lists/"
 fi
 
 # Create output directory if necessary
