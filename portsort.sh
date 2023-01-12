@@ -56,6 +56,7 @@ for file in $(ls $outdir); do
     elif [ $file = "p1433.lst" ]; then mv $outdir/$file $outdir/mssql.lst
     elif [ $file = "p3306.lst" ]; then mv $outdir/$file $outdir/mysql.lst
     elif [ $file = "p3389.lst" ]; then mv $outdir/$file $outdir/rdp.lst
+    elif [ $file = "p5900.lst" ]; then mv $outdir/$file $outdir/vnc.lst
     fi
 done
 
