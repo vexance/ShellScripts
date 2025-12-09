@@ -31,32 +31,32 @@ fi
 echo "[+] Sorting masscan output by port"
 for port in $(cat $1 | cut -d ' ' -f 4 | sort -u); do
     portnum=$(echo $port | cut -d '/' -f 1)
-    echo "[+] Appending to p$portnum.lst"
+    echo "[+] Appending to p$portnum.txt"
     for ip in $(cat $1 | grep " $port" | cut -d ' ' -f 6); do
-        echo $ip >> $outdir/p$portnum.lst
+        echo $ip >> $outdir/p$portnum.txt
     done
 done
 
 for file in $(ls $outdir); do
-    if   [ $file = "p21.lst" ]; then mv $outdir/$file $outdir/ftp.lst
-    elif [ $file = "p22.lst" ]; then mv $outdir/$file $outdir/ssh.lst
-    elif [ $file = "p23.lst" ]; then mv $outdir/$file $outdir/telnet.lst
-    elif [ $file = "p25.lst" ]; then mv $outdir/$file $outdir/smtp.lst
-    elif [ $file = "p53.lst" ]; then mv $outdir/$file $outdir/dns.lst
-    elif [ $file = "p80.lst" ]; then mv $outdir/$file $outdir/http.lst
-    elif [ $file = "p88.lst" ]; then mv $outdir/$file $outdir/kerberos.lst
-    elif [ $file = "p111.lst" ]; then mv $outdir/$file $outdir/nfs.lst
-    elif [ $file = "p137.lst" ]; then mv $outdir/$file $outdir/netbios.lst
-    elif [ $file = "p161.lst" ]; then mv $outdir/$file $outdir/snmp.lst
-    elif [ $file = "p389.lst" ]; then mv $outdir/$file $outdir/ldap.lst
-    elif [ $file = "p443.lst" ]; then mv $outdir/$file $outdir/https.lst
-    elif [ $file = "p445.lst" ]; then mv $outdir/$file $outdir/smb.lst
-    elif [ $file = "p623.lst" ]; then mv $outdir/$file $outdir/ipmi.lst
-    elif [ $file = "p636.lst" ]; then mv $outdir/$file $outdir/ldaps.lst
-    elif [ $file = "p1433.lst" ]; then mv $outdir/$file $outdir/mssql.lst
-    elif [ $file = "p3306.lst" ]; then mv $outdir/$file $outdir/mysql.lst
-    elif [ $file = "p3389.lst" ]; then mv $outdir/$file $outdir/rdp.lst
-    elif [ $file = "p5900.lst" ]; then mv $outdir/$file $outdir/vnc.lst
+    if   [ $file = "p21.txt" ]; then mv $outdir/$file $outdir/ftp.txt
+    elif [ $file = "p22.txt" ]; then mv $outdir/$file $outdir/ssh.txt
+    elif [ $file = "p23.txt" ]; then mv $outdir/$file $outdir/telnet.txt
+    elif [ $file = "p25.txt" ]; then mv $outdir/$file $outdir/smtp.txt
+    elif [ $file = "p53.txt" ]; then mv $outdir/$file $outdir/dns.txt
+    elif [ $file = "p80.txt" ]; then mv $outdir/$file $outdir/http.txt
+    elif [ $file = "p88.txt" ]; then mv $outdir/$file $outdir/kerberos.txt
+    elif [ $file = "p111.txt" ]; then mv $outdir/$file $outdir/nfs.txt
+    elif [ $file = "p137.txt" ]; then mv $outdir/$file $outdir/netbios.txt
+    elif [ $file = "p161.txt" ]; then mv $outdir/$file $outdir/snmp.txt
+    elif [ $file = "p389.txt" ]; then mv $outdir/$file $outdir/ldap.txt
+    elif [ $file = "p443.txt" ]; then mv $outdir/$file $outdir/https.txt
+    elif [ $file = "p445.txt" ]; then mv $outdir/$file $outdir/smb.txt
+    elif [ $file = "p623.txt" ]; then mv $outdir/$file $outdir/ipmi.txt
+    elif [ $file = "p636.txt" ]; then mv $outdir/$file $outdir/ldaps.txt
+    elif [ $file = "p1433.txt" ]; then mv $outdir/$file $outdir/mssql.txt
+    elif [ $file = "p3306.txt" ]; then mv $outdir/$file $outdir/mysql.txt
+    elif [ $file = "p3389.txt" ]; then mv $outdir/$file $outdir/rdp.txt
+    elif [ $file = "p5900.txt" ]; then mv $outdir/$file $outdir/vnc.txt
     fi
 done
 
