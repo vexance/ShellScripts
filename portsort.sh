@@ -37,27 +37,28 @@ for port in $(cat $1 | cut -d ' ' -f 4 | sort -u); do
     done
 done
 
-for file in $(ls $outdir); do
-    if   [ $file = "p21.txt" ]; then mv $outdir/$file $outdir/ftp.txt
-    elif [ $file = "p22.txt" ]; then mv $outdir/$file $outdir/ssh.txt
-    elif [ $file = "p23.txt" ]; then mv $outdir/$file $outdir/telnet.txt
-    elif [ $file = "p25.txt" ]; then mv $outdir/$file $outdir/smtp.txt
-    elif [ $file = "p53.txt" ]; then mv $outdir/$file $outdir/dns.txt
-    elif [ $file = "p80.txt" ]; then mv $outdir/$file $outdir/http.txt
-    elif [ $file = "p88.txt" ]; then mv $outdir/$file $outdir/kerberos.txt
-    elif [ $file = "p111.txt" ]; then mv $outdir/$file $outdir/nfs.txt
-    elif [ $file = "p137.txt" ]; then mv $outdir/$file $outdir/netbios.txt
-    elif [ $file = "p161.txt" ]; then mv $outdir/$file $outdir/snmp.txt
-    elif [ $file = "p389.txt" ]; then mv $outdir/$file $outdir/ldap.txt
-    elif [ $file = "p443.txt" ]; then mv $outdir/$file $outdir/https.txt
-    elif [ $file = "p445.txt" ]; then mv $outdir/$file $outdir/smb.txt
-    elif [ $file = "p623.txt" ]; then mv $outdir/$file $outdir/ipmi.txt
-    elif [ $file = "p636.txt" ]; then mv $outdir/$file $outdir/ldaps.txt
-    elif [ $file = "p1433.txt" ]; then mv $outdir/$file $outdir/mssql.txt
-    elif [ $file = "p3306.txt" ]; then mv $outdir/$file $outdir/mysql.txt
-    elif [ $file = "p3389.txt" ]; then mv $outdir/$file $outdir/rdp.txt
-    elif [ $file = "p5900.txt" ]; then mv $outdir/$file $outdir/vnc.txt
-    fi
-done
+
+#for file in $(ls $outdir); do
+#    if   [ $file = "p21.txt" ]; then mv $outdir/$file $outdir/ftp.txt
+#    elif [ $file = "p22.txt" ]; then mv $outdir/$file $outdir/ssh.txt
+#    elif [ $file = "p23.txt" ]; then mv $outdir/$file $outdir/telnet.txt
+#    elif [ $file = "p25.txt" ]; then mv $outdir/$file $outdir/smtp.txt
+#    elif [ $file = "p53.txt" ]; then mv $outdir/$file $outdir/dns.txt
+#    elif [ $file = "p80.txt" ]; then mv $outdir/$file $outdir/http.txt
+#    elif [ $file = "p88.txt" ]; then mv $outdir/$file $outdir/kerberos.txt
+#    elif [ $file = "p111.txt" ]; then mv $outdir/$file $outdir/nfs.txt
+#    elif [ $file = "p137.txt" ]; then mv $outdir/$file $outdir/netbios.txt
+#    elif [ $file = "p161.txt" ]; then mv $outdir/$file $outdir/snmp.txt
+#    elif [ $file = "p389.txt" ]; then mv $outdir/$file $outdir/ldap.txt
+#    elif [ $file = "p443.txt" ]; then mv $outdir/$file $outdir/https.txt
+#    elif [ $file = "p445.txt" ]; then mv $outdir/$file $outdir/smb.txt
+#    elif [ $file = "p623.txt" ]; then mv $outdir/$file $outdir/ipmi.txt
+#    elif [ $file = "p636.txt" ]; then mv $outdir/$file $outdir/ldaps.txt
+#    elif [ $file = "p1433.txt" ]; then mv $outdir/$file $outdir/mssql.txt
+#    elif [ $file = "p3306.txt" ]; then mv $outdir/$file $outdir/mysql.txt
+#    elif [ $file = "p3389.txt" ]; then mv $outdir/$file $outdir/rdp.txt
+#    elif [ $file = "p5900.txt" ]; then mv $outdir/$file $outdir/vnc.txt
+#    fi
+#done
 
 exit
